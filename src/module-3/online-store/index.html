@@ -1,16 +1,604 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Store</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Card Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.0">
+  </head>
 
-<body>
+  <body class="">
 
-</body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="materials/logo.svg">
+        <h2>Online Store</h2>
+      </div>
+      <div class="header__navigation">
+        <svg class="header__navigation--element" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <use xlink:href="materials/icons.svg#house"></use>
+        </svg>
+        <svg class="header__navigation--separator" fill="currentColor" viewBox="0 0 17.355 13.002">
+          <use xlink:href="materials/icons.svg#doubleAngle"></use>
+        </svg>
+        <span class="header__navigation--element">eCommerce</span>
+        <svg class="header__navigation--separator" fill="currentColor" viewBox="0 0 17.355 13.002">
+          <use xlink:href="materials/icons.svg#doubleAngle"></use>
+        </svg>
+        <span class="header__navigation--element">Electroincs</span>
+      </div>
+    </header>
+
+    <div class="top-level">
+      <aside class="aside">
+        <div class="title-row">
+          <span>Filters</span>
+          <button id="showHideFilters" class="button flexed">
+            <svg fill="currentColor" viewBox="0 0 17.355 13.002">
+              <use xlink:href="materials/icons.svg#doubleAngle"></use>
+            </svg>
+          </button>
+        </div>
+        <section class="filters-container">
+          <h3 class="filters-container__title">Multi Range</h3>
+          <label class="filters-container__radio">
+            <input type="radio" name="range">
+            <div class="button"></div>
+            <span class="text">$10</span>
+          </label>
+          <label class="filters-container__radio">
+            <input type="radio" name="range">
+            <div class="button"></div>
+            <span class="text">$10-$100</span>
+          </label>
+          <label class="filters-container__radio">
+            <input type="radio" name="range">
+            <div class="button"></div>
+            <span class="text">$100-$500</span>
+          </label>
+          <label class="filters-container__radio">
+            <input type="radio" name="range">
+            <div class="button"></div>
+            <span class="text">$500</span>
+          </label>
+          <label class="filters-container__radio">
+            <input type="radio" name="range" checked>
+            <div class="button"></div>
+            <span class="text">All</span>
+          </label>
+
+          <div class="filters-container__separator"></div>
+
+          <h3 class="filters-container__title">Category</h3>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">Cell Phones</span>
+            </div>
+            <span class="quantity">1920</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category" checked>
+              <div class="button"></div>
+              <span class="text">Computers & Tablets</span>
+            </div>
+            <span class="quantity">1820</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">Cell Phone Accessories</span>
+            </div>
+            <span class="quantity">462</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">Appliances</span>
+            </div>
+            <span class="quantity">6556</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">Audio</span>
+            </div>
+            <span class="quantity">120</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">iPhone Accessories</span>
+            </div>
+            <span class="quantity">353</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">Cameras</span>
+            </div>
+            <span class="quantity">45</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">iPhone Cases & Clips</span>
+            </div>
+            <span class="quantity">456</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">TV & Home Theater</span>
+            </div>
+            <span class="quantity">55</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="category">
+              <div class="button"></div>
+              <span class="text">Small Kitchen Appliances</span>
+            </div>
+            <span class="quantity">10</span>
+          </label>
+
+          <div class="filters-container__separator"></div>
+
+          <h3 class="filters-container__title">Brand</h3>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="Brand">
+              <div class="button"></div>
+              <span class="text">Insigni</span>
+            </div>
+            <span class="quantity">220</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">Samsung</span>
+            </div>
+            <span class="quantity">120</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">Apple</span>
+            </div>
+            <span class="quantity">320</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">HP</span>
+            </div>
+            <span class="quantity">32</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">Sony</span>
+            </div>
+            <span class="quantity">520</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">Metra</span>
+            </div>
+            <span class="quantity">55</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">Dyne</span>
+            </div>
+            <span class="quantity">120</span>
+          </label>
+          <label class="filters-container__checkbox">
+            <div class="divider">
+              <input type="checkbox" name="brand">
+              <div class="button"></div>
+              <span class="text">LG</span>
+            </div>
+            <span class="quantity">98</span>
+          </label>
+        </section>
+        <button id="resetFilters">CLEAR ALL FILTERS</button>
+      </aside>
+
+      <main class="main">
+        <div class="title-row">
+          <div class="flexed">
+            <button id="openCloseFilters" class="button flexed">
+              <svg fill="currentColor" viewBox="0 0 16 16">
+                <use xlink:href="materials/icons.svg#filter"></use>
+              </svg>
+              Filters
+            </button>
+            <span>7,618 results found</span>
+          </div>
+          <button id="mainLike" class="button flexed">
+            <svg viewBox="0 0 512 512" fill="currentColor">
+              <use xlink:href="materials/icons.svg#heart"></use>
+            </svg>
+          </button>
+        </div>
+        <section class="main__search">
+          <input id="searchInput" type="text" placeholder="Search">
+          <button id="searchButton">
+            <svg viewBox="0 0 16 16" fill="currentColor">
+              <use xlink:href="materials/icons.svg#search"></use>
+            </svg>
+          </button>
+        </section>
+        <section class="product-list">
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-card__top">
+              <div class="product-card__image-container flexed">
+                <img class="product-card__image" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="product-card__rating-price-row">
+                <div class="product-card__rating">
+                  <span>4.2</span>
+                  <svg viewBox="0 0 576 512" fill="currentColor">
+                    <use xlink:href="materials/icons.svg#star"></use>
+                  </svg>
+                </div>
+                <span class="product-card__price">$428</span>
+              </div>
+              <div class="product-card__description-container">
+                <h3 class="product-card__title">Apple Watch Series 6</h3>
+                <span class="product-card__description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-card__buttons">
+              <button class="wishlist-btn flexed">
+                <svg viewBox="0 0 512 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#heart"></use>
+                </svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="cart-btn flexed">
+                <svg viewBox="0 0 448 512" fill="currentColor">
+                  <use xlink:href="materials/icons.svg#cart"></use>
+                </svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer flexed">
+      <div class="paginator flexed">
+        <button id="previousPage" class="flexed">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <use xlink:href="materials/icons.svg#angleLeft"></use>
+          </svg>
+        </button>
+        <div class="paginator__list flexed">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button class="selected">6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>10</button>
+        </div>
+        <button id="nextPage" class="flexed">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <use xlink:href="materials/icons.svg#angleRight"></use>
+          </svg>
+        </button>
+      </div>
+    </footer>
+
+  </body>
 
 </html>

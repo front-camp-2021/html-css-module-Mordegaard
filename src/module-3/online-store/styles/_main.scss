@@ -1,0 +1,174 @@
+@use "colors" as *;
+
+.main {
+  width: 70%;
+  margin-left: 28px;
+
+  #mainLike {
+    background: #6F64F8;
+    color: white;
+
+    svg {
+      height: 15px;
+      vertical-align: middle;
+    }
+  }
+
+  #openCloseFilters {
+    display: none;
+    background: white;
+    margin-right: 12px;
+    width: 82px;
+    font: 14px 'Montserrat', sans-serif;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 4px;
+    }
+  }
+
+  &__search {
+    position: relative;
+    width: 100%;
+    margin: 16px 0px;
+
+    #searchInput {
+      width: 100%;
+      padding: 17px 28px;
+      margin: 0;
+      border: none;
+      border-radius: 8px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+      box-sizing: border-box;
+      font: 300 18px 'Montserrat', sans-serif;
+    }
+
+    #searchButton {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #606060;
+
+      &:active {
+        color: var(--accent-color);
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31.9%, 1fr));
+  width: 100%;
+  gap: 20px;
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__top {
+     height: 360px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+
+    &__buttons {
+     height: 38px;
+     display: flex;
+
+     button {
+       width: 50%;
+       border: none;
+       font: 600 12px 'Montserrat', sans-serif;
+       text-transform: uppercase;
+
+       &.wishlist-btn {
+         background: $gray-color;
+         color: black;
+
+         &:active {
+           background: #e8e2ff;
+         }
+       }
+
+       &.cart-btn {
+         background: $accent-color;
+         color: white;
+
+         &:active {
+           background: #9e98ea;
+         }
+       }
+
+       svg {
+         width: 18px;
+         min-width: 18px;
+         height: 18px;
+         margin-right: 8px;
+       }
+     }
+    }
+
+    &__image-container {
+      height: 70%;
+    }
+
+    &__image {
+      height: 85%;
+      object-fit: cover;
+    }
+
+    &__rating-price-row {
+      display: flex;
+      justify-content: space-between;
+      width: 85%;
+    }
+
+    &__rating {
+      padding: 4px 7px;
+      background: $accent-color;
+      border-radius: 3px;
+      color: white;
+      vertical-align: middle;
+
+      svg {
+        width: 12px;
+        height: 12px
+      }
+    }
+
+    &__price {
+      font-size: 15px;
+      color: #2C2C2C;
+    }
+
+    &__description-container {
+      width: 85%;
+    }
+
+    &__title {
+      margin-bottom: 0;
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    &__description {
+      font-size: 11px;
+    }
+  }
+}

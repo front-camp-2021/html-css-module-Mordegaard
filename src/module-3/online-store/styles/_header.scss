@@ -1,0 +1,42 @@
+@use "colors" as *;
+
+.header {
+  width: 100%;
+  padding-top: 20px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 68px;
+    }
+
+    & h2 {
+      margin: 0px 0px 0px 18px;
+      font-weight: 600;
+      font-size: 40px;
+      color: #7E72F2;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+
+    &--element {
+      color: #7E72F2;
+      font-size: 11px;
+
+      &:last-child {
+        color: $text-color;
+      }
+    }
+
+    &--separator {
+      margin: 0px 12px;
+      height: 8px;
+    }
+  }
+}
