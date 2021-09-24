@@ -1,1 +1,41 @@
+@use "base";
+@use "header";
+@use "aside";
+@use "main";
+@use "paginator";
 
+@media (max-width: 992px) { /* equivalent to Large bootstrap breakpoint */
+  .aside {
+    display: none;
+  }
+
+  .main {
+    margin: 0;
+    width: 100%;
+
+    #openCloseFilters {
+      display: flex;
+    }
+
+    .product-card {
+      &__image-container {
+        height: 58%;
+      }
+
+      &__product-image {
+        height: 76%;
+      }
+
+      &__buttons button {
+        font-size: 10px;
+
+        svg {
+          width: 15px;
+          min-width: 15px;
+          height: 15px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

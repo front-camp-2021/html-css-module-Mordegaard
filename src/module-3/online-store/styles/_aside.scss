@@ -1,0 +1,103 @@
+@use "colors" as *;
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+
+  #showHideFilters {
+    background: #FFFFFF;
+
+    svg {
+      height: 10px;
+      vertical-align: middle;
+      transform: rotate(180deg);
+    }
+  }
+
+  #resetFilters {
+    width: 100%;
+    margin-top: 16px;
+    padding: 13px 0px;
+    border: none;
+    background: $accent-color;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+    border-radius: 8px;
+    color: white;
+  }
+
+  .filters-container {
+    flex: 1;
+    margin-top: 16px;
+    padding: 15px 96px 15px 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
+    border-radius: 8px;
+
+    &__title {
+      margin: 0px 0px 20px 0px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    &__separator {
+      width: 100%;
+      height: 1px;
+      margin: 26px 0px;
+      background: #D6D6D6;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 10px 0px;
+      font-size: 13px;
+
+      input {
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+
+        &:checked + .button {
+          background: $accent-color;
+          border-color: $accent-color;
+        }
+      }
+
+      .button {
+        width: 14px;
+        min-width: 14px;
+        height: 12px;
+        margin-right: 8px;
+        border: 1px solid #979797;
+      }
+    }
+
+    &__radio {
+      .button {
+        border-radius: 50%;
+      }
+    }
+
+    &__checkbox {
+      justify-content: space-between;
+
+      .divider {
+        display: flex;
+        align-items: center;
+      }
+
+      .button {
+        border-radius: 3px;
+      }
+
+      .quantity {
+        font-size: 11px;
+        margin-left: 12px;
+      }
+    }
+  }
+}

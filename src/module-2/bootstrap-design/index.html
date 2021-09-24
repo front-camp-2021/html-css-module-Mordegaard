@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Card Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="m-3">
+
+    <header class="container-fluid row mb-5">
+      <div class="logo row align-items-center">
+        <img class="col-sm-1 col-4" src="materials/logo.svg">
+        <h2 class="col-sm-4 col-8 text-primary m-0 h1">Online Store</h2>
+      </div>
+      <div class="navigation row align-items-center mt-4">
+        <svg class="navigation-element col-auto text-primary" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+          <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+        </svg>
+        <svg class="separator col-auto" width="12" fill="currentColor" version="1.1" viewBox="0 0 17.355 13.002" xmlns="http://www.w3.org/2000/svg">
+          <path d="m0.14689 0.14689a0.5 0.5 0 0 1 0.708 0l6 6a0.5 0.5 0 0 1 0 0.708l-6 6a0.50063 0.50063 0 0 1-0.708-0.708l5.647-5.646-5.647-5.646a0.5 0.5 0 0 1 0-0.708z" fill-rule="evenodd"/>
+          <path d="m10.5 0.14689a0.5 0.5 0 0 1 0.708 0l6 6a0.5 0.5 0 0 1 0 0.708l-6 6a0.50063 0.50063 0 0 1-0.708-0.708l5.647-5.646-5.647-5.646a0.5 0.5 0 0 1 0-0.708z" fill-rule="evenodd"/>
+        </svg>
+        <span class="navigation-element col-auto text-primary">eCommerce</span>
+        <svg class="separator col-auto" width="12" fill="currentColor" version="1.1" viewBox="0 0 17.355 13.002" xmlns="http://www.w3.org/2000/svg">
+          <path d="m0.14689 0.14689a0.5 0.5 0 0 1 0.708 0l6 6a0.5 0.5 0 0 1 0 0.708l-6 6a0.50063 0.50063 0 0 1-0.708-0.708l5.647-5.646-5.647-5.646a0.5 0.5 0 0 1 0-0.708z" fill-rule="evenodd"/>
+          <path d="m10.5 0.14689a0.5 0.5 0 0 1 0.708 0l6 6a0.5 0.5 0 0 1 0 0.708l-6 6a0.50063 0.50063 0 0 1-0.708-0.708l5.647-5.646-5.647-5.646a0.5 0.5 0 0 1 0-0.708z" fill-rule="evenodd"/>
+        </svg>
+        <span class="navigation-element col-auto">Electroincs</span>
+      </div>
+    </header>
+
+    <div class="main container-fluid row">
+      <aside class="col-4 d-flex flex-column">
+        <div class="row justify-content-between align-items-center mx-0 mb-3">
+          <span class="col h6">Filters</span>
+          <button id="showHideFilters" class="btn btn-primary col-3 col-md-2 col-lg-1 shadow-sm px-1 py-1">
+            <svg width="17.355" height="13.002" fill="currentColor" version="1.1" viewBox="0 0 17.355 13.002" xmlns="http://www.w3.org/2000/svg">
+              <path d="m0.14689 0.14689a0.5 0.5 0 0 1 0.708 0l6 6a0.5 0.5 0 0 1 0 0.708l-6 6a0.50063 0.50063 0 0 1-0.708-0.708l5.647-5.646-5.647-5.646a0.5 0.5 0 0 1 0-0.708z" fill-rule="evenodd"/>
+              <path d="m10.5 0.14689a0.5 0.5 0 0 1 0.708 0l6 6a0.5 0.5 0 0 1 0 0.708l-6 6a0.50063 0.50063 0 0 1-0.708-0.708l5.647-5.646-5.647-5.646a0.5 0.5 0 0 1 0-0.708z" fill-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+        <section class="filters-container flex-grow-1 container shadow rounded p-2 px-4">
+          <h3 class="col-12 h6">Multi Range</h3>
+          <label class="radio-label row align-items-center">
+            <input class="col-1" type="radio" name="range">
+            <span class="text col">$10</span>
+          </label>
+          <label class="radio-label row align-items-center">
+            <input class="col-1" type="radio" name="range">
+            <span class="text col">$10-$100</span>
+          </label>
+          <label class="radio-label row align-items-center">
+            <input class="col-1" type="radio" name="range">
+            <span class="text col">$100-$500</span>
+          </label>
+          <label class="radio-label row align-items-center">
+            <input class="col-1" type="radio" name="range">
+            <span class="text col">$500</span>
+          </label>
+          <label class="radio-label row align-items-center">
+            <input class="col-1" type="radio" name="range" checked>
+            <span class="text col">All</span>
+          </label>
+
+          <div class="separator my-4 border-bottom"></div>
+
+          <h3 class="col-12 h6">Category</h3>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">Cell Phones</span>
+            <span class="quantity col-2 p-0">1920</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category" checked>
+            <span class="text col-9">Computers & Tablets</span>
+            <span class="quantity col-2 p-0">1820</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">Cell Phone Accessories</span>
+            <span class="quantity col-2 p-0">462</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">Appliances</span>
+            <span class="quantity col-2 p-0">6556</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">Audio</span>
+            <span class="quantity col-2 p-0">120</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">iPhone Accessories</span>
+            <span class="quantity col-2 p-0">353</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">Cameras</span>
+            <span class="quantity col-2 p-0">45</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">iPhone Cases & Clips</span>
+            <span class="quantity col-2 p-0">456</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">TV & Home Theater</span>
+            <span class="quantity col-2 p-0">55</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="category">
+            <span class="text col-9">Small Kitchen Appliances</span>
+            <span class="quantity col-2 p-0">10</span>
+          </label>
+
+          <div class="separator my-4 border-bottom"></div>
+
+          <h3 class="col-12 h6">Brand</h3>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="brand">
+            <span class="text col-9">Insigni</span>
+            <span class="quantity col-2 p-0">220</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="brand">
+            <span class="text col-9">Samsung</span>
+            <span class="quantity col-2 p-0">120</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="brand">
+            <span class="text col-9">Apple</span>
+            <span class="quantity col-2 p-0">320</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="brand">
+            <span class="text col-9">HP</span>
+            <span class="quantity col-2 p-0">32</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="brand">
+            <span class="text col-9">Sony</span>
+            <span class="quantity col-2 p-0">520</span>
+          </label>
+          <label class="checkbox-label row align-items-center">
+            <input class="col-1" type="checkbox" name="brand">
+            <span class="text col-9">Metra</span>
+            <span class="quantity col-2 p-0">55</span>
+          </label>
+        </section>
+        <button class="btn btn-primary mt-3" id="resetFilters">CLEAR ALL FILTERS</button>
+      </aside>
+      <main class="col-8">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <!--<button id="openCloseFilters" class="btn flexed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+              <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            Filters
+          </button>-->
+          <span>7,618 results found</span>
+          <button id="mainLike" class="btn btn-primary flexed">
+            <svg xmlns="http://www.w3.org/2000/svg" width=16 height=16 viewBox="0 0 512 512"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
+          </button>
+        </div>
+        <section class="search row mx-0 mb-2">
+           <input type="search" placeholder="Search" class="form-control shadow py-3 px-4" />
+        </section>
+        <section class="product-list row">
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card d-flex flex-column col-3 m-3 p-0 shadow rounded overflow-hidden">
+            <div class="product-top-section p-3">
+              <div class="product-image-container row justify-content-center">
+                <img class="product-image w-100" src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/44-alum-blue-sport-deepnavy-6s-nc?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1599811389000">
+              </div>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="product-rating bg-primary text-white py-1 px-2 rounded">
+                  <span>4.2</span>
+                  <svg aria-hidden="true" width=16 focusable="false" data-prefix="far" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x"><path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z" class=""></path></svg>
+                </div>
+                <span class="product-price">$428</span>
+              </div>
+              <div class="product-description-container">
+                <h3 class="product-title h5">Apple Watch Series 6</h3>
+                <span class="product-description">Корпус из алюминия синего цвета • Спортивный ремешок</span>
+              </div>
+            </div>
+            <div class="product-buttons row mx-0">
+              <button class="btn btn-secondary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-heart fa-w-16 fa-3x"><path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z" class=""></path></svg>
+                <span>Wishlist</span>
+              </button>
+              <button class="btn btn-primary col rounded-0">
+                <svg aria-hidden="true" width=20 focusable="false" data-prefix="far" data-icon="shopping-bag" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-shopping-bag fa-w-14 fa-3x"><path fill="currentColor" d="M352 128C352 57.42 294.579 0 224 0 153.42 0 96 57.42 96 128H0v304c0 44.183 35.817 80 80 80h288c44.183 0 80-35.817 80-80V128h-96zM224 48c44.112 0 80 35.888 80 80H144c0-44.112 35.888-80 80-80zm176 384c0 17.645-14.355 32-32 32H80c-17.645 0-32-14.355-32-32V176h48v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h160v40c0 13.255 10.745 24 24 24s24-10.745 24-24v-40h48v256z" class=""></path></svg>
+                <span>Add to cart</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="d-flex justify-content-center">
+        <button id="previousPage" class="btn btn-secondary rounded-circle mx-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+          </svg>
+        </button>
+        <div class="page-list bg-secondary rounded-pill px-3">
+          <button class="bg-transparent border-0 rounded-circle text-white">1</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">2</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">3</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">4</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">5</button>
+          <button class="btn btn-primary rounded-circle text-white">6</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">7</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">8</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">9</button>
+          <button class="bg-transparent border-0 rounded-circle text-white">10</button>
+        </div>
+        <button id="nextPage" class="btn btn-secondary rounded-circle mx-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </button>
+    </footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,50 @@
+@use "colors" as *;
+
+.footer {
+  .paginator {
+    margin-top: 36px;
+    margin-bottom: 26px;
+
+    & #previousPage, & #nextPage {
+      width: 32px;
+      height: 32px;
+      margin: 0px 15px;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: $gray-color;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &__list {
+      height: 32px;
+      border-radius: 666px;
+      padding: 0px 7px;
+      background: $gray-color;
+
+      button {
+        height: 32px;
+        background: none;
+        border: none;
+        margin: 0px 3px;
+        font: 14px 'Montserrat', sans-serif;
+
+        &.selected {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: $accent-color;
+          color: white;
+        }
+
+        &:active {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
